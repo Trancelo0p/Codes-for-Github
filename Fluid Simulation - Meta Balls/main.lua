@@ -76,7 +76,7 @@ circle[#circle].y = 0
 snapshotGroup:insert( circle[#circle])
 
 
-physics.addBody(circle[#circle], {density=0, friction = 0, bounce = 0.3, radius = rand/math.random(6,8)})
+physics.addBody(circle[#circle], {density=0, friction = 0, bounce = 0, radius = rand/math.random(6,8)})
 
   end
   
@@ -127,7 +127,7 @@ physics.addBody(platform2, "static", {density = 1, friction=0.1, bounce = 0.3})
 
 
 
-tmr = timer.performWithDelay(100,spawnFn,80)
+tmr = timer.performWithDelay(100,spawnFn,80) 
 
 Runtime:addEventListener("enterFrame", function() snapshot:invalidate() end)
 
