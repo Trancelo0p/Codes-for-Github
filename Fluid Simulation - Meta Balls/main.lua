@@ -21,7 +21,7 @@ local tmr
 local rand
 local snapshot
 local snapshotGroup
-local overlayGroup
+
 
 background = display.newImageRect("bg.png", 320, 480)
 background.anchorX = 0
@@ -37,19 +37,7 @@ snapshot.x, snapshot.y = 0, 0
 
 snapshotGroup = snapshot.group
 
-
-overlayGroup = display.newGroup()
-overlayGroup.anchorX = 0
-overlayGroup.anchorY = 0
-overlayGroup.x, snapshot.y = 0, 0
-overlayGroup:insert( snapshot )
-
-
-
 snapshot.fill.effect = "filter.levels"
-
-
-
 snapshot.fill.effect.white = 0.7
 --snapshot.fill.effect.black = 0.1
 --snapshot.fill.effect.gamma = 0
